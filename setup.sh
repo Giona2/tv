@@ -1,7 +1,6 @@
 #!/bin/bash
 
 arg=$1
-echo $arg
 
 if [ "$arg" == "--help" ] || [ "$arg" == "-h" ]; then
     echo -e "\n./setup.sh <command> <argument>"
