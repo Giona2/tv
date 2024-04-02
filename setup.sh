@@ -12,7 +12,7 @@ read confirmed_install
 while [ $confirmed_install!="Y" ]; do
 if [ $confirmed_install=="n" ]; then
     exit 0
-else; then
+else
     read $confirmed_install
 fi
 done
