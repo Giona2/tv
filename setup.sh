@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo ""
 echo "This setup bash script will install:"
 echo "- nala"
 echo "- python3"
@@ -8,6 +9,8 @@ echo "- openbox"
 echo ""
 echo -n "Continue? [Y/n] "
 read confirmed_install
+
+cd ~/
 
 if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
     echo "Cancelling..."
@@ -21,3 +24,6 @@ sudo apt install -y nala
 sudo nala install -y python3
 sudo nala install -y python3-tk
 sudo nala install -y openbox
+
+mv tv/main.py ..
+rm -r tv/
