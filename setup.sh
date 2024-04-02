@@ -1,18 +1,15 @@
 #!/bin/bash
 
-echo ""
-echo "This setup bash script will install:"
-echo "- nala"
-echo "- python3"
-echo "- python3-tk"
-echo "- xorg"
-echo "- xterm"
-echo ""
-echo -n "Continue $USER? [Y/n] "
-read confirmed_install
+arg=$1
+echo $arg
 
-if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
-    echo "Cancelling..."
+if [ "$arg" == "--help" ] || [ "$arg" == "-h" ]; then
+    echo "./setup.sh <command> <argument>"
+    echo "========================================================================================"
+    echo "./setup.sh -h/--help                    prints the documentation for all commands for this program"
+    echo "./setup.sh -s/--start                   begins the setup bash script"
+    exit 0
+elif [ "$arg" != "--start" ] && [ "$arg" != "-s" ]; then
     exit 0
 fi
 
