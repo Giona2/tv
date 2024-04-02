@@ -7,7 +7,6 @@ echo "- python3"
 echo "- python3-tk"
 echo "- xorg"
 echo "- xterm"
-echo "- openbox"
 echo ""
 echo -n "Continue $USER? [Y/n] "
 read confirmed_install
@@ -25,4 +24,3 @@ sudo nala install -y python3
 sudo nala install -y python3-tk
 sudo nala install -y xorg
 sudo nala install -y xterm
-sudo nala install -y openbox
