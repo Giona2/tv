@@ -10,8 +10,6 @@ echo ""
 echo -n "Continue $USER? [Y/n] "
 read confirmed_install
 
-cd /home/$USER/
-
 if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
     echo "Cancelling..."
     exit 0
@@ -25,4 +23,4 @@ sudo nala install -y python3
 sudo nala install -y python3-tk
 sudo nala install -y openbox
 
-sudo mv tv/main.py ../main.py
+sudo mv /home/$USER/tv/main.py /home/$USER/main.py
