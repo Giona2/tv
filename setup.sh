@@ -9,7 +9,7 @@ echo ""
 echo -n "Continue? [Y/n] "
 read confirmed_install
 
-if [ "$confirmed_install"!="y" ] || [ "$confirmed_install"!="Y" ]; then
+if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
     echo "Cancelling..."
     exit 0
 fi
