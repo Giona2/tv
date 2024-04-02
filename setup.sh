@@ -10,6 +10,8 @@ echo ""
 echo -n "Continue? [Y/n] "
 read confirmed_install
 
+sudo su
+
 cd /home/$USER/
 
 if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
@@ -17,13 +19,14 @@ if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
     exit 0
 fi
 
-sudo apt -y update
-sudo apt -y upgrade
-sudo apt install -y nala
+apt -y update
+apt -y upgrade
+apt install -y nala
 
-sudo nala install -y python3
-sudo nala install -y python3-tk
-sudo nala install -y openbox
+nala install -y python3
+nala install -y python3-tk
+nala install -y openbox
 
-sudo mv tv/main.py ../main.py
-sudo rm -r tv/
+mv tv/main.py ../main.py
+
+exit
