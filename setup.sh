@@ -10,7 +10,7 @@ echo ""
 echo -n "Continue? [Y/n] "
 read confirmed_install
 
-cd ~/
+cd /home/$USER/
 
 if [ "$confirmed_install" != "y" ] && [ "$confirmed_install" != "Y" ]; then
     echo "Cancelling..."
