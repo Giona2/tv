@@ -7,7 +7,7 @@ echo "- python3"
 echo "- python3-tk"
 echo "- openbox"
 echo ""
-echo -n "Continue? [Y/n] "
+echo -n "Continue $USER? [Y/n] "
 read confirmed_install
 
 cd /home/$USER/
