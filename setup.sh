@@ -25,5 +25,5 @@ sudo nala install -y python3
 sudo nala install -y python3-tk
 sudo nala install -y openbox
 
-sudo mv tv/main.py ..
+sudo mv tv/main.py ../main.py
 sudo rm -r tv/
