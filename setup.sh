@@ -23,4 +23,4 @@ sudo nala install -y python3
 sudo nala install -y python3-tk
 sudo nala install -y openbox
 
-sudo mv /home/$USER/tv/main.py /home/$USER/main.py
+rename /home/$USER/tv/main.py /home/$USER/main.py
