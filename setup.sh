@@ -9,13 +9,10 @@ echo ""
 echo -n "Continue? [Y/n] "
 read confirmed_install
 
-while [ $confirmed_install!="Y" ]; do
-if [ $confirmed_install=="n" ]; then
+if [ "$confirmed_install"!="Y" ]; then
+    echo "Cancelling..."
     exit 0
-else
-    read $confirmed_install
 fi
-done
 
 sudo apt -y update
 sudo apt -y upgrade
