@@ -37,3 +37,4 @@ sudo nala install -y xterm
 
 mv /home/$USER/tv/.xinitrc /home/$USER/
 rm /home/$USER/tv/setup.sh
+chmod +x /home/$USER/tv/startup.sh
