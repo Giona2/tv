@@ -26,14 +26,14 @@ elif [ "$confirmed_install" == "Y" ] || [ "$confirmed_install" == "y" ]; then
 fi
 done
 
-apt -y update
-apt -y upgrade
-apt install -y nala
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt install -y nala
 
-nala install -y python3
-nala install -y python3-tk
-nala install -y xorg
-nala install -y xterm
+sudo nala install -y python3
+sudo nala install -y python3-tk
+sudo nala install -y xorg
+sudo nala install -y xterm
 
 mv /home/$USER/tv/.xinitrc /home/$USER/
 rm /home/$USER/tv/setup.sh
