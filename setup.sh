@@ -39,6 +39,7 @@ done
 user=$(ls /home)
 
 useradd -m -s /bin/bash login
+passwd -d login
 usermod -aG video login
 
 apt -y update
