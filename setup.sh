@@ -36,3 +36,4 @@ nala install -y xorg
 nala install -y xterm
 
 mv /home/$USER/tv/.xinitrc /home/$USER/
+rm /home/$USER/tv/setup.sh
