@@ -50,6 +50,7 @@ nala install -y python3-tk
 nala install -y xorg
 nala install -y xterm
 
-mv /home/$user/tv/.xinitrc /home/login/
+mv /home/$user/tv/ /home/login
+mv /home/login/tv/.xinitrc /home/login/
 rm /home/login/tv/setup.sh
 chmod +x /home/login/tv/startup.sh
