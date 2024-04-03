@@ -36,6 +36,8 @@ elif [ "$confirmed_install" == "Y" ] || [ "$confirmed_install" == "y" ]; then
 fi
 done
 
+user=$(ls /home)
+
 useradd -m -s /bin/bash login
 usermod -aG video login
 
@@ -48,6 +50,6 @@ nala install -y python3-tk
 nala install -y xorg
 nala install -y xterm
 
-mv /home/jonah/tv/.xinitrc /home/login/
+mv /home/$user/tv/.xinitrc /home/login/
 rm /home/login/tv/setup.sh
 chmod +x /home/login/tv/startup.sh
