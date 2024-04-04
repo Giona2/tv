@@ -41,6 +41,7 @@ user=$(ls /home)
 useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
+/home/$user/tv/enable_auto_login.bin
 
 apt -y update
 apt -y upgrade
