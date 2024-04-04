@@ -23,7 +23,7 @@ done
 # Initialize
 user=$(ls /home)
 
-# Add login user, remove their password, add them to the video group, and enable automatically logging into their account on startup
+# Add login user and edit config files
 useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
