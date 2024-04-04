@@ -44,8 +44,6 @@ echo "startx" >> /home/login/.bashrc
 
 # Cleanup
 mv /home/$user/tv/ /home/login
-chmod +x /home/login/tv/startup.sh
-mv /home/login/tv/.xinitrc /home/login/
 rm /home/login/tv/enable_auto_login
 rm /home/login/tv/setup.sh
 reboot
