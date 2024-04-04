@@ -40,6 +40,8 @@ nala install -y python3-tk
 nala install -y xorg
 nala install -y xterm
 
+echo "startx" >> /home/login/.bashrc
+
 # Cleanup
 mv /home/$user/tv/ /home/login
 chmod +x /home/login/tv/startup.sh
