@@ -28,7 +28,7 @@ useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
 chmod +x /home/$user/tv/enable_auto_login
-/home/$user/tv/enable_auto_login
+/home/$user/tv/enable_auto_login login
 
 # Download necessary packages
 apt -y update
@@ -40,10 +40,13 @@ nala install -y python3-tk
 nala install -y xorg
 nala install -y xterm
 
-echo "startx" >> /home/login/.bashrc
+# Add initialization code to the .bashrc file in login for xserver
+chmod +x /home/$user/tv/init_xserver
+/home/$user/tv/init_xserver login
 
 # Cleanup
 mv /home/$user/tv/ /home/login
 rm /home/login/tv/enable_auto_login
+rm /home/login/tv/init_xserver
 rm /home/login/tv/setup.sh
 reboot
