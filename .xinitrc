@@ -1,1 +1,1 @@
-/home/jonah/tv/startup.sh
+/home/login/tv/startup.sh
