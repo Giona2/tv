@@ -49,4 +49,4 @@ mv /home/$user/tv/ /home/login
 rm /home/login/tv/enable_auto_login
 rm /home/login/tv/init_xserver
 rm /home/login/tv/setup.sh
-reboot
+# reboot
