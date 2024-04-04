@@ -23,14 +23,12 @@ done
 # Initialize
 user=$(ls /home)
 
-mv /home/$user/tv/ /home/login
-
 # Add login user, remove their password, add them to the video group, and enable automatically logging into their account on startup
 useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
-chmod +x /home/login/tv/enable_auto_login
-/home/login/tv/enable_auto_login
+chmod +x /home/$user/tv/enable_auto_login
+/home/$user/tv/enable_auto_login
 
 # Download necessary packages
 apt -y update
@@ -43,6 +41,7 @@ nala install -y xorg
 nala install -y xterm
 
 # Cleanup
+mv /home/$user/tv/ /home/login
 chmod +x /home/login/tv/startup.sh
 mv /home/login/tv/.xinitrc /home/login/
 rm /home/login/tv/enable_auto_login
