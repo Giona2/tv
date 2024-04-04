@@ -9,7 +9,7 @@ echo -e "- nala\n- python3\n- python3-tk\n- xorg\n- xterm"
 echo "And will"
 echo -e "- add a login user to manage login properties"
 echo
-echo "${GRAY} *this setup script should be ran as the root user"
+echo "*this setup script should be ran as the root user"
 echo -n "Do you wish to continue? [Y/n] "
 while read confirmed_install; do
 if [ "$confirmed_install" == "N" ] || [ "$confirmed_install" == "n" ]; then
