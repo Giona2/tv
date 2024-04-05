@@ -23,8 +23,6 @@ done
 # Initialize
 userhome=home/$(ls /home)
 loginhome=home/login
-
-# Make every utility executable
 chmod +x $userhome/tv/utils/make_exec/
 
 # Add login user and edit config files
