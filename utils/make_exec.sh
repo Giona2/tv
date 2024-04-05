@@ -1,3 +1,3 @@
-for [ file in ./ ]; do
+for file in $(find ./); do
   chmod +x $file
 done
