@@ -43,10 +43,10 @@ nala install -y python3 python3-tk
 nala install -y xorg xterm
 
 # Add initialization code to the .bashrc file in login for xserver
-$userhome/tv/utils/init_xserver login
+$userhome/$utils/init_xserver login
 
 # Hide the GRUB menu
-$userhome/tv/utils/
+$userhome/$utils/hide_grub_menu
 
 # Cleanup
 mv $userhome/tv/ $loginhome/
