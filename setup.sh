@@ -39,8 +39,7 @@ apt -y update
 apt -y upgrade
 apt install -y nala
 
-nala install -y python3
-nala install -y python3-tk
+nala install -y python3 python3-tk
 nala install -y xorg xterm
 
 # Add initialization code to the .bashrc file in login for xserver
