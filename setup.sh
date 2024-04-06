@@ -20,16 +20,19 @@ elif [ "$confirmed_install" == "Y" ] || [ "$confirmed_install" == "y" ]; then
 fi
 done
 
-# Initialize
-userhome=home/$(ls /home)
-loginhome=home/login
-chmod +x $userhome/tv/utils/make_exec/
+# Initialize variables
+userhome=/home/$(ls /home)
+loginhome=/home/login/
+utils=tv/utils/
+
+# Make the utils execuable
+chmod +x $userhome/$utils/make_exec/
 
 # Add login user and edit config files
 useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
-$userhome/tv/utils/enable_auto_login login
+$userhome/$utils/enable_auto_login login
 
 # Download necessary packages
 apt -y update
@@ -43,8 +46,11 @@ nala install -y xorg xterm
 # Add initialization code to the .bashrc file in login for xserver
 $userhome/tv/utils/init_xserver login
 
+# Hide the GRUB menu
+$userhome/tv/utils/
+
 # Cleanup
 mv $userhome/tv/ $loginhome/
-rm $loginhome/tv/utils
+rm $loginhome/$utils
 rm $loginhome/tv/setup.sh
 # reboot
