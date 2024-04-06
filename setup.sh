@@ -31,11 +31,15 @@ passwd -d login
 usermod -aG video login
 $userhome/$utils/enable_auto_login login
 
-# Download necessary packages
+# Update and install nala
 apt -y update
 apt -y upgrade
 apt install -y nala
 
+# Remove incompadible default packages
+nala remove -y openbox
+
+# Install necessary packages
 nala install -y python3 python3-tk
 nala install -y xorg xterm
 
