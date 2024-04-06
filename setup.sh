@@ -29,7 +29,7 @@ chmod +x $userhome/$utils/make_exec/
 useradd -m -s /bin/bash login
 passwd -d login
 usermod -aG video login
-$userhome/$utils/enable_auto_login login
+$userhome/$utils/enable_auto_login -- login
 
 # Update and install nala
 apt -y update
