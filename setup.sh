@@ -11,17 +11,14 @@ echo -e "- add a login user to manage login properties"
 echo
 echo "*this setup script should be ran as the root user"
 echo -n "Do you wish to continue? [Y/n] "
-while read confirmed_install; do
-if [ "$confirmed_install" == "N" ] || [ "$confirmed_install" == "n" ]; then
-    echo "Cancelled..."
-    exit 0
-elif [ "$confirmed_install" == "Y" ] || [ "$confirmed_install" == "y" ]; then
-    break
+read confirmed_install
+if [ "$confirmed_install" != "Y" ] && [ "$confirmed_install" != "y" ]; then
+	echo "Abort..."
+	exit 0
 fi
-done
 
 # Initialize variables
-userhome=/home/$(ls /home)
+userhome=/home/$(ls /home/)
 loginhome=/home/login/
 utils=tv/utils/
 
@@ -49,7 +46,13 @@ $userhome/$utils/init_xserver login
 $userhome/$utils/hide_grub_menu
 
 # Cleanup
-mv $userhome/tv/ $loginhome/
+mv $userhome/tv/ $loginhome
 rm $loginhome/$utils
 rm $loginhome/tv/setup.sh
-# reboot
+
+# Confirm reboot
+echo -n "Would you like to reboot? [Y/n] "
+read confirmed_reboot
+if [ "$confirmed_reboot" == "Y" ] || [ "$confirmed_reboot" == "y" ]; then
+	reboot
+fi
